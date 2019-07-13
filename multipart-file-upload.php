@@ -36,4 +36,8 @@ $ch = curl_init('URL');
 $ch = buildMultiPartReq($ch, uniqid(),
     ['key' => 'value', 'key2' => 'value2'], ['file1' => $_FILES['file1'], 'file2' => _FILES['file2']]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-echo curl_exec($ch);
+$res = curl_exec($ch);
+
+print_r($res);
+
+
